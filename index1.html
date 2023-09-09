@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>News Api</title>
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-links nav-items" id="politics" onclick="onNav('politics')">Politics</li>
+                    <li class="hover-links nav-items" id="ipl" onclick="onNav('ipl')">IPL</li>
+                    <li class="hover-links nav-items" id="finance" onclick="onNav('finance')">Finance</li>
+                </ul>
+            </div>
+            <div class="nav-search flex">
+                <input type="text" class="news-input" id="search-txt" placeholder="e.g Science" value="" required>
+                <button class="search-btn" id="search-btn">Search</button>
+                <button class="search-btn" id="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="cards-container container flex" id="card-container"></div>
+    </main>
+    <!-- Template for cards -->
+    <template id="template-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is a Title</h3>
+                <h5 class="news-source" id="news-source">End Gadget 11/06/2003</h5>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel perspiciatis excepturi obcaecati facere dolorum sed</p>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
